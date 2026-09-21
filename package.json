@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "catalog:csv": "node scripts/export-shopify-csv.mjs"
   },
   "dependencies": {
     "next": "16.3.5",
