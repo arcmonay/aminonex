@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Manrope, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CartProvider } from "@/lib/cart-context";
 import "./globals.css";
 
-const syne = Syne({
-  variable: "--font-syne",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
 const manrope = Manrope({
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${syne.variable} ${manrope.variable} h-full`}>
+    <html lang="en" className={`${outfit.variable} ${manrope.variable} h-full`}>
       <body className="min-h-full antialiased">
         <CartProvider>
           <div className="site">

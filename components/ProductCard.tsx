@@ -9,7 +9,7 @@ export function ProductCard({ product }: { product: Product }) {
       <ProductVisual product={product} />
       <div className="product-card__body">
         <p className="product-card__sku">{product.sku}</p>
-        <p className="product-card__name">{product.title}</p>
+        <p className="product-card__name">{product.title.replace("AminoNex ", "")}</p>
         <p className="product-card__meta">{product.size} · {product.finish}</p>
         <p className="product-card__price">
           {formatMoney(product.price)}
